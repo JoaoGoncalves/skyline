@@ -1,3 +1,4 @@
+import { Button } from "./ui/Button";
 
 export default function App() {
   return (
@@ -8,6 +9,7 @@ export default function App() {
       </header>
       <main className="content">
         <p>Hello, Skyline</p>
+        <Button variant="ghost">Teste</Button>
       </main>
     </div>
   );
