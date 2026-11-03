@@ -1,0 +1,424 @@
+{
+  "flights": [
+    {
+      "id": 1,
+      "from": "Faro",
+      "to": "Lisbon",
+      "date": "2026-09-22T12:40:00.000Z",
+      "delayed": false,
+      "delay": 0,
+      "aircraft": { "type": "A319", "registration": "CS-1001" },
+      "prices": [
+        { "flightClass": "economy", "amount": 98 },
+        { "flightClass": "business", "amount": 268 },
+        { "flightClass": "first", "amount": 551 }
+      ]
+    },
+    {
+      "id": 2,
+      "from": "Porto",
+      "to": "Lisbon",
+      "date": "2026-10-15T15:10:00.000Z",
+      "delayed": true,
+      "delay": 20,
+      "aircraft": { "type": "A320", "registration": "CS-1002" },
+      "prices": [
+        { "flightClass": "economy", "amount": 124 },
+        { "flightClass": "business", "amount": 341 },
+        { "flightClass": "first", "amount": 587 }
+      ]
+    },
+    {
+      "id": 3,
+      "from": "Faro",
+      "to": "Lisbon",
+      "date": "2026-09-09T14:30:00.000Z",
+      "delayed": true,
+      "delay": 15,
+      "aircraft": { "type": "A320neo", "registration": "CS-1003" },
+      "prices": [
+        { "flightClass": "economy", "amount": 150 },
+        { "flightClass": "business", "amount": 309 },
+        { "flightClass": "first", "amount": 676 }
+      ]
+    },
+    {
+      "id": 4,
+      "from": "Porto",
+      "to": "Lisbon",
+      "date": "2026-09-18T14:15:00.000Z",
+      "delayed": false,
+      "delay": 0,
+      "aircraft": { "type": "A321", "registration": "CS-1004" },
+      "prices": [
+        { "flightClass": "economy", "amount": 91 },
+        { "flightClass": "business", "amount": 326 },
+        { "flightClass": "first", "amount": 535 }
+      ]
+    },
+    {
+      "id": 5,
+      "from": "Lisbon",
+      "to": "Porto",
+      "date": "2026-10-09T08:15:00.000Z",
+      "delayed": false,
+      "delay": 0,
+      "aircraft": { "type": "A321neo", "registration": "CS-1005" },
+      "prices": [
+        { "flightClass": "economy", "amount": 156 },
+        { "flightClass": "business", "amount": 310 },
+        { "flightClass": "first", "amount": 638 }
+      ]
+    },
+    {
+      "id": 6,
+      "from": "Faro",
+      "to": "Lisbon",
+      "date": "2026-10-14T13:15:00.000Z",
+      "delayed": false,
+      "delay": 0,
+      "aircraft": { "type": "E190", "registration": "CS-1006" },
+      "prices": [
+        { "flightClass": "economy", "amount": 78 },
+        { "flightClass": "business", "amount": 318 },
+        { "flightClass": "first", "amount": 588 }
+      ]
+    },
+    {
+      "id": 7,
+      "from": "Lisbon",
+      "to": "Porto",
+      "date": "2026-09-08T09:40:00.000Z",
+      "delayed": true,
+      "delay": 15,
+      "aircraft": { "type": "E195", "registration": "CS-1007" },
+      "prices": [
+        { "flightClass": "economy", "amount": 103 },
+        { "flightClass": "business", "amount": 285 },
+        { "flightClass": "first", "amount": 552 }
+      ]
+    },
+    {
+      "id": 8,
+      "from": "Lisbon",
+      "to": "Porto",
+      "date": "2026-10-19T06:00:00.000Z",
+      "delayed": false,
+      "delay": 0,
+      "aircraft": { "type": "B737-800", "registration": "CS-1008" },
+      "prices": [
+        { "flightClass": "economy", "amount": 126 },
+        { "flightClass": "business", "amount": 344 },
+        { "flightClass": "first", "amount": 533 }
+      ]
+    },
+    {
+      "id": 9,
+      "from": "Lisbon",
+      "to": "Faro",
+      "date": "2026-09-12T14:20:00.000Z",
+      "delayed": false,
+      "delay": 0,
+      "aircraft": { "type": "A220", "registration": "CS-1009" },
+      "prices": [
+        { "flightClass": "economy", "amount": 188 },
+        { "flightClass": "business", "amount": 426 },
+        { "flightClass": "first", "amount": 634 }
+      ]
+    },
+    {
+      "id": 10,
+      "from": "Porto",
+      "to": "Faro",
+      "date": "2026-10-21T18:00:00.000Z",
+      "delayed": false,
+      "delay": 0,
+      "aircraft": { "type": "A319", "registration": "CS-1010" },
+      "prices": [
+        { "flightClass": "economy", "amount": 186 },
+        { "flightClass": "business", "amount": 400 },
+        { "flightClass": "first", "amount": 625 }
+      ]
+    },
+    {
+      "id": 11,
+      "from": "Faro",
+      "to": "Porto",
+      "date": "2026-10-14T11:10:00.000Z",
+      "delayed": false,
+      "delay": 0,
+      "aircraft": { "type": "A320", "registration": "CS-1011" },
+      "prices": [
+        { "flightClass": "economy", "amount": 78 },
+        { "flightClass": "business", "amount": 290 },
+        { "flightClass": "first", "amount": 583 }
+      ]
+    },
+    {
+      "id": 12,
+      "from": "Porto",
+      "to": "Lisbon",
+      "date": "2026-09-17T12:50:00.000Z",
+      "delayed": false,
+      "delay": 0,
+      "aircraft": { "type": "A320neo", "registration": "CS-1012" },
+      "prices": [
+        { "flightClass": "economy", "amount": 149 },
+        { "flightClass": "business", "amount": 363 },
+        { "flightClass": "first", "amount": 656 }
+      ]
+    },
+    {
+      "id": 13,
+      "from": "Faro",
+      "to": "Porto",
+      "date": "2026-09-29T07:50:00.000Z",
+      "delayed": false,
+      "delay": 0,
+      "aircraft": { "type": "A321", "registration": "CS-1013" },
+      "prices": [
+        { "flightClass": "economy", "amount": 179 },
+        { "flightClass": "business", "amount": 382 },
+        { "flightClass": "first", "amount": 585 }
+      ]
+    },
+    {
+      "id": 14,
+      "from": "Faro",
+      "to": "Porto",
+      "date": "2026-10-11T15:45:00.000Z",
+      "delayed": true,
+      "delay": 30,
+      "aircraft": { "type": "A321neo", "registration": "CS-1014" },
+      "prices": [
+        { "flightClass": "economy", "amount": 79 },
+        { "flightClass": "business", "amount": 254 },
+        { "flightClass": "first", "amount": 596 }
+      ]
+    },
+    {
+      "id": 15,
+      "from": "Lisbon",
+      "to": "Faro",
+      "date": "2026-10-10T11:40:00.000Z",
+      "delayed": false,
+      "delay": 0,
+      "aircraft": { "type": "E190", "registration": "CS-1015" },
+      "prices": [
+        { "flightClass": "economy", "amount": 184 },
+        { "flightClass": "business", "amount": 402 },
+        { "flightClass": "first", "amount": 605 }
+      ]
+    },
+    {
+      "id": 16,
+      "from": "Lisbon",
+      "to": "Porto",
+      "date": "2026-09-24T10:15:00.000Z",
+      "delayed": false,
+      "delay": 0,
+      "aircraft": { "type": "E195", "registration": "CS-1016" },
+      "prices": [
+        { "flightClass": "economy", "amount": 147 },
+        { "flightClass": "business", "amount": 331 },
+        { "flightClass": "first", "amount": 632 }
+      ]
+    },
+    {
+      "id": 17,
+      "from": "Faro",
+      "to": "Lisbon",
+      "date": "2026-10-19T13:40:00.000Z",
+      "delayed": false,
+      "delay": 0,
+      "aircraft": { "type": "B737-800", "registration": "CS-1017" },
+      "prices": [
+        { "flightClass": "economy", "amount": 178 },
+        { "flightClass": "business", "amount": 362 },
+        { "flightClass": "first", "amount": 589 }
+      ]
+    },
+    {
+      "id": 18,
+      "from": "Faro",
+      "to": "Porto",
+      "date": "2026-10-15T14:20:00.000Z",
+      "delayed": false,
+      "delay": 0,
+      "aircraft": { "type": "A220", "registration": "CS-1018" },
+      "prices": [
+        { "flightClass": "economy", "amount": 145 },
+        { "flightClass": "business", "amount": 380 },
+        { "flightClass": "first", "amount": 617 }
+      ]
+    },
+    {
+      "id": 19,
+      "from": "Porto",
+      "to": "Faro",
+      "date": "2026-10-10T10:40:00.000Z",
+      "delayed": true,
+      "delay": 23,
+      "aircraft": { "type": "A319", "registration": "CS-1019" },
+      "prices": [
+        { "flightClass": "economy", "amount": 160 },
+        { "flightClass": "business", "amount": 378 },
+        { "flightClass": "first", "amount": 566 }
+      ]
+    },
+    {
+      "id": 20,
+      "from": "Porto",
+      "to": "Lisbon",
+      "date": "2026-09-17T06:10:00.000Z",
+      "delayed": false,
+      "delay": 0,
+      "aircraft": { "type": "A320", "registration": "CS-1020" },
+      "prices": [
+        { "flightClass": "economy", "amount": 125 },
+        { "flightClass": "business", "amount": 358 },
+        { "flightClass": "first", "amount": 594 }
+      ]
+    },
+    {
+      "id": 21,
+      "from": "Lisbon",
+      "to": "Faro",
+      "date": "2026-10-16T06:45:00.000Z",
+      "delayed": true,
+      "delay": 30,
+      "aircraft": { "type": "A320neo", "registration": "CS-1021" },
+      "prices": [
+        { "flightClass": "economy", "amount": 109 },
+        { "flightClass": "business", "amount": 264 },
+        { "flightClass": "first", "amount": 586 }
+      ]
+    },
+    {
+      "id": 22,
+      "from": "Porto",
+      "to": "Lisbon",
+      "date": "2026-09-18T14:15:00.000Z",
+      "delayed": false,
+      "delay": 0,
+      "aircraft": { "type": "A321", "registration": "CS-1022" },
+      "prices": [
+        { "flightClass": "economy", "amount": 163 },
+        { "flightClass": "business", "amount": 353 },
+        { "flightClass": "first", "amount": 594 }
+      ]
+    },
+    {
+      "id": 23,
+      "from": "Porto",
+      "to": "Faro",
+      "date": "2026-09-18T21:30:00.000Z",
+      "delayed": false,
+      "delay": 0,
+      "aircraft": { "type": "A321neo", "registration": "CS-1023" },
+      "prices": [
+        { "flightClass": "economy", "amount": 189 },
+        { "flightClass": "business", "amount": 385 },
+        { "flightClass": "first", "amount": 633 }
+      ]
+    },
+    {
+      "id": 24,
+      "from": "Faro",
+      "to": "Porto",
+      "date": "2026-10-05T16:15:00.000Z",
+      "delayed": false,
+      "delay": 0,
+      "aircraft": { "type": "E190", "registration": "CS-1024" },
+      "prices": [
+        { "flightClass": "economy", "amount": 168 },
+        { "flightClass": "business", "amount": 327 },
+        { "flightClass": "first", "amount": 573 }
+      ]
+    },
+    {
+      "id": 25,
+      "from": "Lisbon",
+      "to": "Faro",
+      "date": "2026-09-11T13:50:00.000Z",
+      "delayed": false,
+      "delay": 0,
+      "aircraft": { "type": "E195", "registration": "CS-1025" },
+      "prices": [
+        { "flightClass": "economy", "amount": 144 },
+        { "flightClass": "business", "amount": 384 },
+        { "flightClass": "first", "amount": 640 }
+      ]
+    },
+    {
+      "id": 26,
+      "from": "Porto",
+      "to": "Faro",
+      "date": "2026-10-13T13:50:00.000Z",
+      "delayed": false,
+      "delay": 0,
+      "aircraft": { "type": "B737-800", "registration": "CS-1026" },
+      "prices": [
+        { "flightClass": "economy", "amount": 79 },
+        { "flightClass": "business", "amount": 288 },
+        { "flightClass": "first", "amount": 558 }
+      ]
+    },
+    {
+      "id": 27,
+      "from": "Porto",
+      "to": "Faro",
+      "date": "2026-09-27T10:45:00.000Z",
+      "delayed": false,
+      "delay": 0,
+      "aircraft": { "type": "A220", "registration": "CS-1027" },
+      "prices": [
+        { "flightClass": "economy", "amount": 179 },
+        { "flightClass": "business", "amount": 387 },
+        { "flightClass": "first", "amount": 708 }
+      ]
+    },
+    {
+      "id": 28,
+      "from": "Lisbon",
+      "to": "Porto",
+      "date": "2026-09-16T10:20:00.000Z",
+      "delayed": true,
+      "delay": 10,
+      "aircraft": { "type": "A319", "registration": "CS-1028" },
+      "prices": [
+        { "flightClass": "economy", "amount": 85 },
+        { "flightClass": "business", "amount": 298 },
+        { "flightClass": "first", "amount": 530 }
+      ]
+    },
+    {
+      "id": 29,
+      "from": "Lisbon",
+      "to": "Faro",
+      "date": "2026-09-15T09:50:00.000Z",
+      "delayed": false,
+      "delay": 0,
+      "aircraft": { "type": "A320", "registration": "CS-1029" },
+      "prices": [
+        { "flightClass": "economy", "amount": 155 },
+        { "flightClass": "business", "amount": 377 },
+        { "flightClass": "first", "amount": 662 }
+      ]
+    },
+    {
+      "id": 30,
+      "from": "Faro",
+      "to": "Lisbon",
+      "date": "2026-09-29T06:10:00.000Z",
+      "delayed": false,
+      "delay": 0,
+      "aircraft": { "type": "A320neo", "registration": "CS-1030" },
+      "prices": [
+        { "flightClass": "economy", "amount": 90 },
+        { "flightClass": "business", "amount": 274 },
+        { "flightClass": "first", "amount": 607 }
+      ]
+    }
+  ]
+}
