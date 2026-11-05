@@ -1,3 +1,4 @@
+import { Badge } from "../../ui/Badge";
 import { Button } from "../../ui/Button";
 import type { Flight } from "./data/flight";
 
@@ -19,7 +20,11 @@ export function FlightCard({ flight, selected = false, onSelectedChange }: Fligh
         <h3>
             {flight.from} ➜ {flight.to}
         </h3>
-        {flight.delayed && <span className="badge">+{flight.delay} min</span>}
+        {flight.delayed ? (
+          <Badge variant="warn">+{flight.delay} min</Badge>
+        ) : (
+          <Badge>on Time</Badge>
+        )}
       </header>
       <p>Flight #{flight.id} . {flight.aircraft.type}</p>
        <p>{dateFormat.format(new Date(flight.date))}</p>
