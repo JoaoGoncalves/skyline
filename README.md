@@ -6,7 +6,7 @@ Formador: João Gonçalves · [joaogoncalves.net](https://joaogoncalves.net) · 
 
 ## Requisitos
 
-- **Node.js 22.12 ou superior** (recomendado: 24 LTS) — o Vite 8 não arranca com versões anteriores. Confirmar com `node -v`.
+- **Node.js 24 LTS, 24.15 ou superior** — com versões anteriores o `npm install` recusa instalar (o projeto define `engines` + `engine-strict`). Confirmar com `node -v`; com nvm: `nvm install && nvm use`.
 - Git
 - Browser com o **React Developer Tools**
 - Editor: VS Code (recomendado)
@@ -52,7 +52,8 @@ O ramo `main` tem sempre a versão mais recente.
 
 ## Problemas comuns
 
-- **O Vite não arranca** → versão do Node abaixo de 22.12. Atualizar para o 24 LTS.
+- **`npm install` falha com `EBADENGINE`** → Node abaixo de 24.15. Atualizar para o 24 LTS mais recente.
+- **Depois de um `git pull`** que mudou o `package.json` → correr `npm install`.
 - **Porta 3000 ocupada** → no `package.json`, script `api`, trocar para `--port 3001`.
 - **`/flights` não existe** → o `db.json` tem de estar na raiz do projeto antes do `npm start`.
 - **O VS Code mostra erros de TypeScript diferentes do `npm run build`** → abrir um `.tsx`, Command Palette → *TypeScript: Select TypeScript Version* → *Use Workspace Version*.
