@@ -1,0 +1,9 @@
+:root { font-family: system-ui, sans-serif; color: #0f1a08; background: #fff; }
+main { max-width: 640px; margin: 40px auto; padding: 0 16px; }
+h1 { margin-bottom: 4px; }
+.hint { color: #6b7a5a; margin-top: 0; }
+form { display: flex; gap: 8px; margin: 16px 0; }
+input { flex: 1; padding: 6px 8px; }
+button { padding: 6px 10px; cursor: pointer; }
+li { margin: 6px 0; }
+li button { margin-left: 8px; }

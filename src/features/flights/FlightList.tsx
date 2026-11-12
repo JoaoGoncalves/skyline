@@ -20,7 +20,7 @@ export function FlightList({ flights, basket, onToggle }: FlightListProps) {
             key={flight.id}
             flight={flight}
             selected= {basket[flight.id] ?? false}
-            onSelectedChange={ selected => onToggle(flight.id, selected)}
+            onToggle={onToggle}
         />
       ))}
     </div>

@@ -1,0 +1,31 @@
+:root { font-family: system-ui, sans-serif; color: #0f1f22; background: #fafcfc; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+.layout { display: grid; grid-template-columns: 280px 1fr; min-height: 100vh; }
+nav { background: #0f2a2e; color: #e6f5f6; padding: 1rem; }
+nav h1 { font-size: 1.1rem; color: #32b7bc; margin: 0 0 1rem; }
+nav h2 { font-size: .75rem; text-transform: uppercase; letter-spacing: .05em; color: #9fc9cc; margin: 1.25rem 0 .5rem; }
+nav button { display: block; width: 100%; text-align: left; background: none; border: 0; color: inherit; padding: .4rem .5rem; border-radius: 6px; cursor: pointer; font: inherit; }
+nav button.on, nav button:hover { background: #1d8a8f; }
+main { padding: 1.5rem 2rem; }
+main h3 { margin: 0; font-size: 1.4rem; }
+.file { color: #5f7579; margin-top: .25rem; }
+.demo { display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: flex-start; margin-top: 1rem; }
+.col { display: flex; flex-direction: column; gap: .6rem; min-width: 260px; flex: 1; }
+.col h4 { margin: 0; color: #1d8a8f; }
+.demo > small, .demo > button { flex-basis: 100%; }
+.demo > button { flex-basis: auto; }
+.field { display: flex; flex-direction: column; gap: .25rem; font-size: .85rem; color: #5f7579; }
+input { padding: .45rem .6rem; border: 1px solid #c9dfe1; border-radius: 6px; font: inherit; }
+button { padding: .45rem .9rem; border-radius: 6px; border: 1px solid #1d8a8f; background: #fff; color: #1d8a8f; cursor: pointer; font: inherit; }
+.btn-primary { background: #1d8a8f; color: #fff; }
+.btn-ghost { background: transparent; }
+button:disabled { opacity: .5; }
+.badge { padding: .2rem .6rem; border-radius: 999px; }
+.badge.dark { background: #0f2a2e; color: #fff; }
+.badge.light { background: #e6f5f6; color: #0f2a2e; }
+.box { padding: 1rem; border: 2px dashed #32b7bc; border-radius: 8px; }
+.flash { padding: .6rem; margin: .3rem 0; border: 1px solid #c9dfe1; border-radius: 8px; display: flex; flex-direction: column; gap: .4rem; }
+.flash code { font-size: .75rem; color: #5f7579; }
+ul { padding-left: 1.2rem; margin: 0; }
+li { margin: .25rem 0; }

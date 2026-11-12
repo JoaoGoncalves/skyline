@@ -16,7 +16,7 @@ export function FlightSearch() {
     // state derivado
     const selectedCount = Object.values(basket).filter(Boolean).length;
 
-    function updatebasket(flightId: number, selected: boolean): void {
+    function updateBasket (flightId: number, selected: boolean): void {
         setBasket( b => ({...b, [flightId]: selected}))
     }
 
@@ -28,7 +28,7 @@ export function FlightSearch() {
     <>
       <Panel title="Flight Search" actions={<span className="chip">{selectedCount} selected</span>}>
         <SearchForm onSearch={search} onClear={()=>setFlights([])} />
-        <FlightList flights={flights} basket={basket} onToggle={updatebasket} />
+        <FlightList flights={flights} basket={basket} onToggle={updateBasket} />
       </Panel>
       <hr />
       <pre>{JSON.stringify(basket,null, 2)}</pre>

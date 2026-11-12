@@ -39,6 +39,22 @@ O ramo `main` tem sempre a versão mais recente.
 | `curso/slides/` | PDF dos slides de cada sessão |
 | `curso/exercicios/` | Exercício de revisão de cada sessão (corrigido no início da sessão seguinte) |
 | `curso/snippets/` | O código da aula, passo a passo, pela ordem dos slides |
+| `curso/resumos/` | Resumo em perguntas e respostas (a partir da Sessão 4) |
+
+## Demos — pasta `demos/`
+
+Dois mini projetos independentes, usados nas aulas. Cada um tem o seu `README.md`, o seu `package.json` e corre à parte:
+
+| Pasta | O que mostra |
+|---|---|
+| `demos/react18-vs-19/` | O que mudou do React 18 para o 19 (Sessão 1) e porque é que um componente renderiza (Sessão 2) |
+| `demos/compiler-demo/` | A mesma app com e sem React Compiler (Sessão 4) |
+
+```bash
+cd demos/compiler-demo
+npm install
+npm run dev
+```
 
 ## Scripts
 
