@@ -40,6 +40,7 @@ O ramo `main` tem sempre a versão mais recente.
 | `curso/exercicios/` | Exercício de revisão de cada sessão (corrigido no início da sessão seguinte) |
 | `curso/snippets/` | O código da aula, passo a passo, pela ordem dos slides |
 | `curso/resumos/` | Resumo em perguntas e respostas (a partir da Sessão 4) |
+| `curso/extras/` | Perguntas da sala e pormenores, um ficheiro por tema (índice em `curso/extras/README.md`) |
 
 ## Demos — pasta `demos/`
 
