@@ -1,4 +1,4 @@
-# React 18 → 19 · exemplos para a S1 e a S2
+# React 18 → 19 · exemplos para a S1, a S2 e a S5
 
 Mini projeto de revisão. Cada ficheiro tem a versão **React 18** e a versão **React 19** lado a lado, com comentários a explicar o que mudou e porquê.
 
@@ -34,6 +34,14 @@ Aqui **nada mudou** do 18 para o 19 — é o modelo mental que falta a quem vem 
 | 04 | `s2/04-memo-e-compiler.tsx` | React 18: `memo` + `useCallback` à mão. React 19 + Compiler: o mesmo efeito sem escrever nada (S4). |
 
 Nos exemplos da S2 cada componente **muda de cor quando renderiza** (e escreve na consola). Em dev o `StrictMode` renderiza duas vezes — é normal.
+
+## Sessão 5 · ter 17 nov — hooks avançados
+
+| # | Ficheiro | Ideia |
+|---|---|---|
+| 01 | `s5/01-ref-vs-state.tsx` | `useRef` guarda um valor **sem renderizar** (o id de um timer, o valor anterior). O que aparece no ecrã é state. |
+| 02 | `s5/02-stale-closure.tsx` | Um `setInterval` criado no 1.º render vê para sempre os valores desse render. Correção: forma funcional (`c => c + 1`). |
+| 03 | `s5/03-effect-event.tsx` | `useEffectEvent`: o effect **lê** o valor atual sem **recomeçar** quando ele muda. |
 
 ## Notas
 

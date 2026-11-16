@@ -1,5 +1,5 @@
 /**
- * Navegação simples entre os exemplos (sem router — o React Router é na Sessão 5).
+ * Navegação simples entre os exemplos (sem router — o React Router é na Sessão 6).
  * Cada exemplo está num ficheiro próprio, com a versão React 18 e a versão
  * React 19 lado a lado e os comentários a explicar a diferença.
  */
@@ -14,6 +14,9 @@ import PorqueRerender from './s2/01-porque-rerender';
 import ChildrenComoProps from './s2/02-children-como-props';
 import KeysDemo from './s2/03-keys';
 import MemoECompiler from './s2/04-memo-e-compiler';
+import RefVsState from './s5/01-ref-vs-state';
+import StaleClosure from './s5/02-stale-closure';
+import EffectEventDemo from './s5/03-effect-event';
 
 type Exemplo = { id: string; titulo: string; ficheiro: string; Comp: ComponentType };
 
@@ -36,6 +39,14 @@ const exemplos: { sessao: string; itens: Exemplo[] }[] = [
       { id: 's2-02', titulo: 'children como props', ficheiro: 's2/02-children-como-props.tsx', Comp: ChildrenComoProps },
       { id: 's2-03', titulo: 'keys', ficheiro: 's2/03-keys.tsx', Comp: KeysDemo },
       { id: 's2-04', titulo: 'memo → Compiler (antevisão S4)', ficheiro: 's2/04-memo-e-compiler.tsx', Comp: MemoECompiler },
+    ],
+  },
+  {
+    sessao: 'Sessão 5 · ter 17 nov — Hooks avançados',
+    itens: [
+      { id: 's5-01', titulo: 'useRef vs useState', ficheiro: 's5/01-ref-vs-state.tsx', Comp: RefVsState },
+      { id: 's5-02', titulo: 'closures stale', ficheiro: 's5/02-stale-closure.tsx', Comp: StaleClosure },
+      { id: 's5-03', titulo: 'useEffectEvent', ficheiro: 's5/03-effect-event.tsx', Comp: EffectEventDemo },
     ],
   },
 ];

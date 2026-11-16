@@ -1,5 +1,5 @@
 /*
- * S1 · 06 — Ref callbacks com cleanup (bónus — tratado a fundo na Sessão 4)
+ * S1 · 06 — Ref callbacks com cleanup (bónus — volta na Sessão 5, com os hooks avançados)
  * ----------------------------------------------------------------------------
  * Uma "ref callback" é uma FUNÇÃO passada em ref={...}: o React chama-a com o
  * elemento quando ele aparece no DOM.
