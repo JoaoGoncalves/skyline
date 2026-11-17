@@ -3,6 +3,7 @@ import { Panel } from "../../ui/Panel";
 import { FlightList } from "./FlightList";
 import { SearchForm } from "./SearchForm";
 import { useFlights } from "./useFlights";
+import { useLocalStorage } from "../../hooks/useLocalStorage";
 
 type Filter = {from: string, to: string}
 
@@ -10,7 +11,7 @@ export function FlightSearch() {
 
     const [filter, setFilter] = useState<Filter | null>(null);
     const {flights, loading, error} = useFlights(filter);
-    const [basket, setBasket] = useState<Record<number, boolean>>({5: true, 7:true});
+    const [basket, setBasket] = useLocalStorage<Record<number, boolean>>('skyline.basket',{});
     
 
     // state derivado
