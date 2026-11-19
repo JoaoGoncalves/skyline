@@ -7,10 +7,11 @@ export type Filter = { from: string; to: string };
 type SearchFormProps = {
   onSearch: (filter: Filter) => void;
   onClear: () => void;
+  initialFilter: Filter | null;
 };
 
-export function SearchForm({ onSearch, onClear }: SearchFormProps) {
-  const [filter, setFilter] = useState<Filter>({ from: "Lisbon", to: "Porto" });
+export function SearchForm({ onSearch, onClear, initialFilter }: SearchFormProps) {
+  const [filter, setFilter] = useState<Filter>(initialFilter ?? {from: '', to: ''});
   const fromRef = useRef<HTMLInputElement>(null);
 
    const canSearch = filter.from !== '' && filter.to !== '';

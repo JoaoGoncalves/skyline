@@ -1,21 +1,29 @@
-import { useState } from "react";
+import { useEffect, useEffectEvent } from "react";
 import { Panel } from "../../ui/Panel";
 import { FlightList } from "./FlightList";
 import { SearchForm } from "./SearchForm";
-import { useFlights } from "./useFlights";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
+import { useLoaderData, useSearchParams } from "react-router";
+import { flightsLoader } from "./loaders";
 
 type Filter = {from: string, to: string}
 
 export function FlightSearch() {
 
-    const [filter, setFilter] = useState<Filter | null>(null);
-    const {flights, loading, error} = useFlights(filter);
+    const {filter, flights} = useLoaderData< typeof flightsLoader>()
+    const [searchParams, setSearchParams] = useSearchParams();
     const [basket, setBasket] = useLocalStorage<Record<number, boolean>>('skyline.basket',{});
     
-
     // state derivado
     const selectedCount = Object.values(basket).filter(Boolean).length;
+
+    const logSearch = useEffectEvent( (searched: Filter)=> {
+      console.info(`[Skyline] ${searched.from} -> ${searched.to} - ${selectedCount} no cesto.`);
+    })
+
+    useEffect(() => {
+     if(filter) logSearch(filter)
+    }, [filter])
 
  
     function updateBasket (flightId: number, selected: boolean): void {
@@ -26,12 +34,13 @@ export function FlightSearch() {
   return (
     <>
       <Panel title="Flight Search" actions={<span className="chip">{selectedCount} selected</span>}>
-        <SearchForm onSearch={setFilter} onClear={()=>setFilter(null)} />
-        {loading && <p className="empty">Loading flights…</p>}
-        {error && <p className="empty">Could not load flights: {error}</p>}
-        {!loading && !error && (
-          <FlightList flights={flights} basket={basket} onToggle={updateBasket} />
-        )}
+        <SearchForm 
+          key={searchParams.toString()}
+          initialFilter={filter}
+          onSearch={ f => setSearchParams(f)} 
+          onClear={()=> setSearchParams({})} />
+       
+        <FlightList flights={flights} basket={basket} onToggle={updateBasket} />
       </Panel>
       <hr />
       <pre>{JSON.stringify(basket,null, 2)}</pre>
