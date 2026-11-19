@@ -2,6 +2,7 @@ import { memo } from "react";
 import { Badge } from "../../ui/Badge";
 import { Button } from "../../ui/Button";
 import type { Flight } from "./data/flight";
+import { Link } from "react-router";
 
 type FlightCardProps = {
   flight: Flight;
@@ -20,7 +21,7 @@ function FlightCardBase({ flight, selected = false, onToggle }: FlightCardProps)
     <article className={selected ? 'card selected' : 'card'}>
       <header className="card-header">
         <h3>
-          {flight.from} ➜ {flight.to}
+          <Link to={`/flights/${flight.id}`}>{flight.from} ➜ {flight.to}</Link>
         </h3>
         {flight.delayed ? (
           <Badge variant="warn">+{flight.delay} min</Badge>

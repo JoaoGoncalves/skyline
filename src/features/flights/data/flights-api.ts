@@ -13,3 +13,11 @@ export async function fetchFlights(filter: Filter, signal?: AbortSignal): Promis
   }
   return response.json();
 }
+
+export async function fetchFlight(id: string, signal?: AbortSignal): Promise<Flight> {
+  const response = await fetch(`${API_URL}/flights/${id}`, { signal });
+  if (!response.ok) {
+    throw new Error(`HTTP ${response.status}`);
+  }
+  return response.json();
+}

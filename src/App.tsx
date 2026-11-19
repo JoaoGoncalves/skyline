@@ -1,7 +1,11 @@
-import { NavLink, Outlet } from 'react-router';
+import { NavLink, Outlet, useNavigation } from 'react-router';
 import { AppShell } from './ui/AppShell';
 
 export default function App() {
+
+  const navigation = useNavigation();
+  const busy = navigation.state === 'loading';
+
   return (
    <AppShell brand='Skyline' actions={
     <>
@@ -12,7 +16,9 @@ export default function App() {
       </nav>
     </>
    }>
+    <div className={busy ? 'busy' : undefined}>
       <Outlet />
+    </div>
    </AppShell>
   );
 }

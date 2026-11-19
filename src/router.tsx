@@ -2,7 +2,8 @@ import { createBrowserRouter, Navigate } from "react-router";
 import App from "./App";
 import { FlightSearch } from "./features/flights/FlightSearch";
 import { AboutPage } from "./pages/AboutPage";
-import { flightsLoader } from "./features/flights/loaders";
+import { flightLoader, flightsLoader } from "./features/flights/loaders";
+import { FlightDetail } from "./features/flights/FlightDetail";
 
 export const router = createBrowserRouter([
     {
@@ -12,6 +13,7 @@ export const router = createBrowserRouter([
         children: [
             {index: true, element: <Navigate to='/flights' replace/>},
             {path: 'flights', Component: FlightSearch, loader: flightsLoader },
+            {path: 'flights/:id', Component: FlightDetail, loader: flightLoader },
             {path: 'about', Component: AboutPage },
         ]
     }

@@ -1,7 +1,7 @@
 import type { LoaderFunctionArgs } from "react-router";
 import type { Flight } from "./data/flight";
 import type { Filter } from "./SearchForm"
-import { fetchFlights } from "./data/flights-api";
+import { fetchFlight, fetchFlights } from "./data/flights-api";
 
 type FlightsData = {
     filter: Filter | null;
@@ -18,4 +18,9 @@ export async function flightsLoader({url, request}: LoaderFunctionArgs): Promise
     const filter: Filter = {from, to};
     const flights = await fetchFlights(filter, request.signal);
     return {filter, flights}
+}
+
+export async function flightLoader({params, request}: LoaderFunctionArgs): Promise<Flight>{
+    if(!params.id) throw Error('Missing flight ID');
+    return fetchFlight(params.id, request.signal);
 }
