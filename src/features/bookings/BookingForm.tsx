@@ -1,5 +1,5 @@
-import { useActionState } from "react";
-import type { Booking, NewBooking } from "./data/booking";
+import { useActionState, useOptimistic } from "react";
+import type { Booking, NewBooking, OptimisticBooking } from "./data/booking";
 import type { FlightClass } from "../flights/data/flight";
 import { createBooking } from "./data/bookings-api";
 import { BookingList } from "./BookingList";
@@ -22,6 +22,11 @@ export function BookingForm({ flightId, initialBookings }: BookingFormProps) {
     error: null,
    })
 
+   const [optimisticBookings, addOptimisticBooking] = useOptimistic<OptimisticBooking[], OptimisticBooking>(
+    state.bookings,
+    (current, booking) => [...current , booking]
+   )
+
    async function bookFlight(prev: BookingState, formData: FormData): Promise<BookingState> {
     const newBooking: NewBooking = {
       flightId,
@@ -30,6 +35,9 @@ export function BookingForm({ flightId, initialBookings }: BookingFormProps) {
       seats: Number(formData.get('seats')),
       flightClass: formData.get('flightClass') as FlightClass, // confiamos no <select> (por agora)
     };
+
+    addOptimisticBooking({ ...newBooking, id: -Date.now(), createdAt: new Date().toISOString(), pending: true }); 
+
     try {
       const booking = await createBooking(newBooking);
       return { bookings: [...prev.bookings, booking], error: null };
@@ -40,7 +48,7 @@ export function BookingForm({ flightId, initialBookings }: BookingFormProps) {
 
   return (
     <>
-      <BookingList bookings={state.bookings} />
+      <BookingList bookings={optimisticBookings} />
       <form className="booking" action={formAction}>
         <div className="field">
           <label htmlFor="passenger">Passenger</label>

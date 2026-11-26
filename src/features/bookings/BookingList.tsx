@@ -1,7 +1,7 @@
-import type { Booking } from './data/booking';
+import type {  OptimisticBooking } from './data/booking';
 
 type BookingListProps = {
-  bookings: Booking[];
+  bookings: OptimisticBooking[];
 };
 
 export function BookingList({ bookings }: BookingListProps) {
@@ -10,8 +10,9 @@ export function BookingList({ bookings }: BookingListProps) {
   return (
     <ul className="bookings">
       {bookings.map((b) => (
-        <li key={b.id}>
+        <li key={b.id} className={b.pending ? 'pending' : undefined}>
           {b.passenger} · {b.seats} × {b.flightClass}
+          {b.pending && '. booking'}
         </li>
       ))}
     </ul>

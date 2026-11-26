@@ -12,3 +12,5 @@ export interface Booking {
 
 export type NewBooking = Omit<Booking, 'id' | 'createdAt'>;
 
+export type OptimisticBooking = Booking & { pending?: boolean };
+

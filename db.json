@@ -817,6 +817,24 @@
       "flightClass": "business",
       "createdAt": "2026-11-26T20:32:03.797Z",
       "id": 4
+    },
+    {
+      "flightId": 7,
+      "passenger": "maria",
+      "email": "joao@joaogoncalves.net",
+      "seats": 2,
+      "flightClass": "first",
+      "createdAt": "2026-11-26T20:45:34.758Z",
+      "id": 5
+    },
+    {
+      "flightId": 7,
+      "passenger": "joao",
+      "email": "joao@joaogoncalves.net",
+      "seats": 1,
+      "flightClass": "economy",
+      "createdAt": "2026-11-26T20:47:09.166Z",
+      "id": 6
     }
   ]
 }
