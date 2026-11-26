@@ -808,6 +808,15 @@
       "flightClass": "first",
       "createdAt": "2026-11-26T20:21:56.820Z",
       "id": 3
+    },
+    {
+      "flightId": 7,
+      "passenger": "joao",
+      "email": "joao@joaogoncalves.net",
+      "seats": 1,
+      "flightClass": "business",
+      "createdAt": "2026-11-26T20:32:03.797Z",
+      "id": 4
     }
   ]
 }

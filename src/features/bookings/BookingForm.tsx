@@ -3,7 +3,7 @@ import type { Booking, NewBooking } from "./data/booking";
 import type { FlightClass } from "../flights/data/flight";
 import { createBooking } from "./data/bookings-api";
 import { BookingList } from "./BookingList";
-import { Button } from "../../ui/Button";
+import { SubmitButton } from "../../ui/SubmitButton";
 
 type BookingState = {
   bookings: Booking[];
@@ -17,7 +17,7 @@ type BookingFormProps = {
 
 export function BookingForm({ flightId, initialBookings }: BookingFormProps) {
 
-   const [state, formAction, isPending] = useActionState (bookFlight, {
+   const [state, formAction] = useActionState (bookFlight, {
     bookings: initialBookings,
     error: null,
    })
@@ -62,9 +62,7 @@ export function BookingForm({ flightId, initialBookings }: BookingFormProps) {
             <option value="first">first</option>
           </select>
         </div>
-        <Button type="submit" disabled={isPending}>
-          {isPending ? 'Booking…' : 'Book'}
-        </Button>
+         <SubmitButton pendingText="Booking…">Book</SubmitButton>
         {state.error && <p className="form-error">{state.error}</p>}
       </form>
     </>

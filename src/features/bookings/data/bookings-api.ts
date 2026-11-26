@@ -11,13 +11,13 @@ export async function fetchBookings(flightId: string, signal?: AbortSignal): Pro
 
 export async function createBooking(booking: NewBooking): Promise<Booking> {
   await new Promise((resolve) => setTimeout(resolve, 1500)); // simula um server lento
-  
+  //throw new Error('Booking service is down');
   const response = await fetch(`${API_URL}/bookings`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ ...booking, createdAt: new Date().toISOString() }),
   });
-  
+
   if (!response.ok) {
     throw new Error(`HTTP ${response.status}`);
   }
