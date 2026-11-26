@@ -2,15 +2,18 @@ import { data, type LoaderFunctionArgs } from "react-router";
 import type { Flight } from "./data/flight";
 import type { Filter } from "./SearchForm"
 import { fetchFlight, fetchFlights, fetchRelatedFlights } from "./data/flights-api";
+import type { Booking } from "../bookings/data/booking";
+import { fetchBookings } from "../bookings/data/bookings-api";
 
 type FlightsData = {
     filter: Filter | null;
     flights: Flight[];
 }
 
-type FlightData = {   // ← NOVO
+type FlightData = {   
     flight: Flight;
-    related: Promise<Flight[]>; // ainda não resolvida
+    related: Promise<Flight[]>; 
+    bookings: Booking[];
 }
 
 
@@ -27,9 +30,15 @@ export async function flightsLoader({url, request}: LoaderFunctionArgs): Promise
 
 export async function flightLoader({params, request}: LoaderFunctionArgs): Promise<FlightData>{
     if(!params.id) throw data('Missing flight ID', {status: 400});
-    const flight = await fetchFlight(params.id, request.signal);
+    
+    //const flight = await fetchFlight(params.id, request.signal);
+    const [flight, bookings] = await Promise.all([
+        fetchFlight(params.id, request.signal),
+        fetchBookings(params.id, request.signal)
+    ])
+    
     if(!flight) throw data(`Flight ${params.id} not found`, {status: 404})
     
     const related = fetchRelatedFlights(flight, request.signal);
-    return {flight, related};
+    return {flight, related, bookings};
 }

@@ -2,7 +2,7 @@
 import type { Filter } from '../SearchForm';
 import type { Flight } from './flight';
 
-const API_URL = 'http://localhost:3000';
+export const API_URL = 'http://localhost:3000';
 
 export async function fetchFlights(filter: Filter, signal?: AbortSignal): Promise<Flight[]> {
  
